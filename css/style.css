@@ -2224,7 +2224,7 @@ a.twitter:before {
 
   /* hides scrollbars (because it has padding) */
   #post_title, #post_content {
-    overflow: hidden;
+    width: 87%;
   }
 
   /* moves admin more to the left and top */
@@ -2236,12 +2236,18 @@ a.twitter:before {
   /* moves to the left buttons save, slug, publish */
   #editor_buttons {
     top: 16px;
-    left: 56px;
+    left: 45px;
   }
 
   /* moves them up */
   .fullscreen_button {
-    top: 16px;
+    top: 18px;
+    right: 1.2em;
+  }
+
+  /* replace text with icons */
+  .fullscreen_button:after {
+    margin-top: -.9em;
   }
 
   /* no navigation arrows for small screens */
@@ -2261,7 +2267,7 @@ a.twitter:before {
 
   /* smaller padding between header links of discover */
   #discover header a {
-    padding: 0 0.5em;
+    padding: 0 0.4em;
   }
 
   /* moves links to the left */
@@ -2327,7 +2333,7 @@ a.twitter:before {
 
   /* hides long names */
   .recommended_people_list a span {
-    margin-top: -30px;
+    /*margin-top: -30px;*/
   }
 
   /* moves footer closer and adds left padding for logo */
@@ -2357,5 +2363,9 @@ a.twitter:before {
   #footer>a:hover:after {
     top: -20px;
     left: 2px;
+  }
+
+  #feedback {
+    display: none;
   }
 }
