@@ -1,0 +1,166 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #ffedab;
+  color: #222;
+}
+
+::-moz-selection {
+  background: #ffedab;
+  color: #222;
+}
+
+::selection {
+  background: #ffedab;
+  color: #222;
+}
+
+:-webkit-full-screen {
+  background: #333;
+}
+
+:-moz-full-screen {
+  background: #333;
+}
+
+:fullscreen {
+  background: #333;
+}
+
+/* bg is slightly lighter */
+#top_buttons, .profile_pic, #top_buttons a:before, .has_editor_buttons a:after, #sidebar, #editor_buttons, .fixed, #discover.has_fixed_element header a {
+  background: #3f3f3f;
+}
+
+.post_footer span, #discover header a, .post_footer .twitter {
+  background: #333;
+}
+
+/* text styling */
+a:hover, button, h1, h2, #sidebar, #statistics h2, #sidebar_content ul a, .profile_avatar>a:after, #toolbar:after {
+  color: #fff;
+}
+
+/* text is slightly dark */
+#statistics span, #sidebar_content a>span, .empty {
+  color: #aaa;
+}
+
+/* text is even more dark */
+#sidebar header, #statistics span:before, .right span:before, .about_person p {
+ color: #888;
+}
+
+/* border styling */
+.profile_pic {
+  border: solid 1px #555;
+}
+
+
+/*** INDIVIDUAL ELEMENTS ***/
+/***************************/
+
+.white, #login_window div, .profile_avatar img {
+  color: #bbb !important;
+  background: #3f3f3f;
+  -webkit-box-shadow: 0 4px 0 0 #555, 0 0 0 1px #555;
+  -moz-box-shadow: 0 4px 0 #555, 0 0 0 1px #555;
+  box-shadow: 0 4px 0 0 #555, 0 0 0 1px #555;
+}
+
+.white:active {
+  -webkit-box-shadow: 0 0 0 1px #555, 0 4px 0 0 #333;
+  -moz-box-shadow: 0 0 0 1px #555, 0 4px 0 0 #333;
+  box-shadow: 0 0 0 1px #555, 0 4px 0 0 #333;
+}
+
+#popup, #admin_sidebar_popup {
+  -webkit-box-shadow: 0 3px 3px 0 #555;
+  -moz-box-shadow: 0 3px 3px 0 #555;
+  box-shadow: 0 3px 3px 0 #555;
+  background: #3f3f3f;
+  border: solid 1px #555;
+  color: #bbb;
+}
+
+#popup:after, #admin_sidebar_popup:after {
+  color: #3f3f3f;
+  -webkit-text-shadow: 0 4px 3px #555;
+  -moz-text-shadow: 0 4px 3px #555;
+  text-shadow: 0 4px 3px #555;
+}
+
+#toolbar, .window {
+  background: #fff;
+}
+
+#toolbar:after {
+  border-top: 5px solid #fff;
+}
+
+#toolbar button {
+  color: #777;
+}
+
+#toolbar button:hover {
+  color: #000;
+}
+
+/* shows url address under link as popup */
+#post_content a:hover:after {
+  background: #444;
+  color: #bbb;
+}
+
+#editor_buttons {
+  border-top: solid 1px #555;
+  border-right: solid 1px #555;
+  border-bottom: solid 1px #555; 
+}
+
+.has_divider:after, .fixed {
+  border-bottom: solid 1px #555;
+}
+
+#top_buttons {
+  border-top: solid 1px #555;
+  border-bottom: solid 1px #555;
+}
+
+#top_buttons button:hover:after, #editor_buttons button:hover:after, .sidebar_expanded .menu_button:after, .fullscreen_button:hover:after, .post h3 a, .about_person h1 a, .about_person .fixed span a {
+  color: #fff !important;
+}
+
+#sidebar {
+  border-right: solid 1px #555;
+}
+
+#statistics div:nth-of-type(2) {
+  border-left: solid 1px #555;
+  border-right: solid 1px #555;
+}
+
+#sidebar_content ul a {
+  border-bottom: solid 1px #555;
+}
+
+#sidebar_content ul li:hover:after, #post_content:before {
+  background: #3f3f3f;
+}
+
+.slider {
+  border: solid 1px #555;
+  background: #333;
+  background-image: -moz-linear-gradient(bottom, #3f3f3f 0%, #333 100%);
+  background-image: -o-linear-gradient(bottom, #3f3f3f 0%, #333 100%);
+  background-image: -webkit-linear-gradient(bottom, #3f3f3f 0%, #333 100%);
+  background-image: linear-gradient(bottom, #3f3f3f 0%, #333 100%);
+}
+
+.slider:after {
+  background: #ccc;
+  border: solid 1px #ccc;
+}

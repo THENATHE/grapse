@@ -1,0 +1,77 @@
+iPhone: 320x480, 640×960, 640×1136, iPad: 1024x768, 2048x1536
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" sizes="72x72" href="touch.png" />(57, 72, 114,144)
+<link rel="stylesheet" href="css/styles.css" media="print" />
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<!--[if IE ]><body class="ie"><![endif]-->
+
+###############CSS################
+@media screen and (min-width: 768px){}
+@media all and (orientation: landscape) {}
+@media all and (min-device-pixel-ratio: 1.5) {}
+
+@font-face {font-family: 'icons';src: url("./fonts/fontello.eot");}
+
+input[type='checkbox'] {}
+
+li:nth-child(3n+3) { (3X0)+3 }
+
+.right span:nth-of-type(2):before {content: 'h';}
+
+-webkit-transform: rotate(-90deg);
+-wekbit-transition: all 0.4s;
+
+background-attachment: fixed;
+
+p:first-child:first-letter {}
+
+###############JAVASCRIPT################
+$(document).ready(function() {}); || $(function() {});
+
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+if (width < "768") {}
+
+var chrome = navigator.userAgent.match(/Chrome/i) != null;
+if(chrome) {
+  $("#content").addClass("chrome");
+}
+
+$('.link').toggleClass('hidden').hide();
+$('.link').addClass('hidden').fadeIn();
+$('.link').find('p').remove();
+$('.link').hasClass('hidden').html('<p>Something</p>');
+$('.link').hasClass('hidden').prepend('<p>Before</p>').animate({opacity: "0.1", left: "+=400"}, 1200);
+$(".accordion p:not(:first)").slideUp("slow");
+$("#header h1").css("margin-left", "-0.055em");
+$(this).find("a").attr("href");
+$("a[@href$=pdf]").addClass("pdf").attr({ target: "_blank" });
+
+if ($('#myElement').length > 0) { // it exists }
+if($('.active_page').next('.page_link').length == true) {}
+
+$('#post_content, #toolbar').mouseup(function(e){});
+
+$('#post_content').keydown(function(e) {});
+if (e.keyCode == 13) {}
+
+if (typeof jQuery == 'undefined') {// jQuery IS NOT loaded, do stuff here.}
+
+setTimeout(function() {checkTextSelected();}, 10);
+
+$('div.pane').scrollTo('#div');
+p = $("p:last").offset(); p.html( "left: " + offset.left);
+
+/* preload images */
+<script type="text/javascript">
+$.preloadImages = function(){
+ for(var i = 0; i<arguments.length; i++){
+   $("<img />").attr("src", arguments[i]);
+ }
+}
+
+$(document).ready(function(){
+ $.preloadImages("hoverimage1.jpg","hoverimage2.jpg");
+});
+</script>

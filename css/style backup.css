@@ -1,0 +1,1375 @@
+/*** GLOBAL ***/
+/**************/
+@font-face {
+  font-family: 'icons';
+  src: url("../fonts/fontello.eot");
+  src: url("../fonts/fontello.eot?#iefix") format('embedded-opentype'), url("../fonts/fontello.woff") format('woff'), url("../fonts/fontello.ttf") format('truetype'), url("../fonts/fontello.svg#icons") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Bitter', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  line-height: 1.77777778em; /* 32px */
+  background: url('../images/linse.jpg') #fdfdfd;
+  color: #333;
+  overflow-x: hidden;
+  padding-top: 3.6em;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* if sidebar is expanded, provide smooth animations to content */
+  -webkit-transition: margin-left 0.2s;
+  -moz-transition: margin-left 0.2s;
+  -o-transition: margin-left 0.2s;
+  transition: margin-left 0.2s;
+}
+
+::-moz-selection {
+  background: #fff1bf;
+  color: #222;
+}
+
+::-webkit-selection {
+  background: #fff1bf;
+  color: #222;
+}
+
+::selection {
+  background: #fff1bf;
+  color: #222;
+}
+
+a, a:visited {
+  color: #de4830;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #333;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* when something is hidden */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* when a link is selected */
+.selected_link {
+  color: #a69d91 !important;
+  text-decoration: none !important;
+}
+
+/* headers of each section lighter colour font */
+.grey, #sidebar header {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  color: #a69d91;
+  font-size: 0.66666667em; /* 12px */
+  line-height: 0.66666667em; /* 12px */
+  text-transform: uppercase;
+  padding-bottom: 1.6em;
+  display: block;
+}
+
+/* styling of the buttons */
+button {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 0.785em;
+  color: #aaa;
+  float: left;
+  width: 16.6666667%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* no tap highlight on mobile devices */
+}
+
+/* different colours of buttons */
+.red, .brown, .green, .white {
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  color: #fff !important;
+  background: #eb8270;
+  -webkit-box-shadow: 0 4px 0 #d6624e;
+  -moz-box-shadow: 0 4px 0 #d6624e;
+  box-shadow: 0 4px 0 #d6624e;
+  font-size: 0.66666667em;
+  /*text-indent: -9999px;*/
+  text-align: left;
+  height: 25px;
+  width: 11%;
+  padding: 5px 7px;
+}
+
+.brown {
+  background: #a69d91;
+  -webkit-box-shadow-color: 0 4px 0 #867d70;
+  -moz-box-shadow: 0 4px 0 #867d70;
+  box-shadow: 0 4px 0 #867d70;
+}
+
+.green {
+  background: #a4d64e;
+  -webkit-box-shadow: 0 4px 0 #8bbd36;
+  -moz-box-shadow: 0 4px 0 #8bbd36;
+  box-shadow: 0 4px 0 #8bbd36;
+}
+
+.white {
+  color: #555 !important;
+  background: #ffffff;
+  -webkit-box-shadow: 0 4px 0 0 #e6e6e6, 0 0 0 1px #e6e6e6;
+  -moz-box-shadow: 0 4px 0 #e6e6e6, 0 0 0 1px #e6e6e6;
+  box-shadow: 0 4px 0 0 #e6e6e6, 0 0 0 1px #e6e6e6;
+}
+
+/* on active change box shadow to simulate button */
+.red:active, .brown:active, .green:active, .white:active {
+  margin-top: 2px;
+  -webkit-box-shadow: 0px 3px 0px #eb8270;
+  -moz-box-shadow: 0px 3px 0px #eb8270;
+  box-shadow: 0px 3px 0px #eb8270;
+}
+
+.brown:active {
+  -webkit-box-shadow: 0px 3px 0px #a69d91;
+  -moz-box-shadow: 0px 3px 0px #a69d91;
+  box-shadow: 0px 3px 0px #a69d91;
+}
+
+.green:active {
+  -webkit-box-shadow: 0px 3px 0px #a4d64e;
+  -moz-box-shadow: 0px 3px 0px #a4d64e;
+  box-shadow: 0px 3px 0px #a4d64e;
+} 
+
+.white:active {
+  -webkit-box-shadow: 0 0 0 1px #e6e6e6, 0 4px 0 0 #fdfdfd;
+  -moz-box-shadow: 0 0 0 1px #e6e6e6, 0 4px 0 0 #fdfdfd;
+  box-shadow: 0 0 0 1px #e6e6e6, 0 4px 0 0 #fdfdfd;
+}
+
+
+/*** TYPOGRAPHY ***/
+/******************/
+
+h1, h2 {
+  font-weight: normal;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.44444444em; /* 44px */
+  line-height: 1.4545em; /* 64px */
+}
+
+h2 {
+  font-size: 1.444em; /* 26px */
+  line-height: 1.2308em; /* 32px */
+  margin: 1.2308em 0 0.5em;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+p, blockquote, #post_content ul, #post_content ol {
+  margin: 0 0 1.77777778em;
+}
+
+blockquote {
+  padding-left: 1.2em;
+  font-style: italic;
+  border-left: solid 0.3em #de4830;
+}
+
+#post_content li:before {
+  content: "\2022";
+  color: #de4830;
+  margin-left: -0.1em;
+  padding-right: 1em;
+}
+
+
+/*** TEXT EDITOR ***/
+/*******************/
+
+#post_title, #post_content {
+  width: 45%;
+  padding: 0 5%; /* easier selection of text */
+  margin: 0 auto 0.72em;
+  outline: none;
+}
+
+/* adds some padding to image for easier selection */
+#post_content img {
+  padding: 0.5em;
+  margin-left: -0.5em;
+  display: block;
+  /*border: solid 1px #e6e6e6;*/
+}
+
+/* don't change mouse on link hover */
+#post_content a {
+  cursor: default;
+}
+
+/* shows url address under link as popup */
+#post_content a:hover:after {
+  content: attr(href);
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  position: absolute;
+  top: 1.7em;
+  left: 0;
+  background: #a69d91;
+  font-size: 13px;
+  display: block;
+  padding: 1px 5px 3px;
+  line-height: 1.3em;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  min-width: 60px;
+  font-style: normal;
+  z-index: 100;
+}
+
+/* moves down url address popup of h2 link */
+#post_content h2 a:hover:after {
+  top: 2.6em;
+}
+
+/* necessary for the link popup to display on top of image */
+#post_content .img {
+  display: block;
+}
+
+/* moves url address popup at top for image */
+#post_content .img:hover:after {
+  top: 0.7em;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.discover_alert {
+  position: fixed;
+  bottom: 0;
+  width: 45%;
+  left: 30%;
+  text-align: center;
+  padding: 0.2em 0 0;
+  font-size: 0.875em;
+  background: #fdfacd;
+  color: #666;
+  border: solid 1px #e5e3ba;
+}
+
+/* no margin for paragraph */
+.discover_alert p {
+  margin: 0;
+}
+
+/* styles the X link */
+.discover_alert a:last-child {
+  color: #de4830;
+  float: right;
+  margin-top: -15px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+/*** TEXT EDITOR TOOLBAR ***/
+/***************************/
+
+#toolbar, .window {
+  background: rgba(6,6,6,0.9);
+  position: absolute;
+  height: 2.3em;
+  width: 240px;
+  z-index: 100;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* pointing down arrow of toolbar */
+#toolbar:after {
+  content: "";
+  border-top: 5px solid rgba(6,6,6,0.9);
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  height: 5px;
+  left: 47%;
+}
+
+/* changes colour of icon if formatting is active */
+.active {
+  color: #de4830 !important;
+}
+
+#toolbar button {
+  font-family: Georgia, serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* on hover changes colour */
+#toolbar button:hover {
+  color: #fff;
+}
+
+/* hides text of buttons to be replaced with icons */
+.link_button, .image_button, .list_button, .insert_button, .remove_button {
+  text-indent: -9999px;
+}
+
+/* replace text with icons */
+.link_button:after, .image_button:after, .list_button:after, .insert_button:after, .remove_button:after {
+  content: 'l';
+  font-family: 'icons';
+  text-indent: 0;
+  display: block;
+  margin-top: -1em;
+  font-size: 1.1em;
+}
+
+.image_button:after {
+  content: 'p';
+  font-size: 0.9em;
+}
+
+.list_button:after {
+  content: 'L';
+  font-size: 1.2em;
+  margin-top: -0.95em;
+}
+
+.quote_button {
+  font-size: 1.8em !important;
+  padding-top: 0.35em;
+}
+
+.insert_button:after {
+  content: 'y';
+}
+
+.remove_button:after {
+  content: 'x';
+}
+
+.insert_button:hover:after {
+  color: #a4d64e;
+}
+
+.remove_button:hover:after {
+  color: #de4830;
+}
+
+.window>input {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 500;
+  width: 63%;
+  height: 1.7em;
+  display: block;
+  margin: 5px;
+  padding: 4px 5px;
+  font-size: 0.7em;
+  background: #222;
+  color: #fff;
+  border: none;
+  float: left;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* bigger width for image input because no X button */
+.image>input {
+  width: 75%;
+}
+
+input:focus {
+  outline: none;
+  background: #444;
+}
+
+/* hides X button for image input */
+.image .remove_button {
+  display: none !important;
+}
+
+/* smaller width for buttons of window */
+.window>button {
+  width: 14% !important;
+}
+
+/* for when exporting code window no buttons */
+.window.text button {
+  display: none;
+}
+
+/* smaller input to make room for text to the right */
+.window.text input {
+  width: 50%;
+}
+
+/* text to be displayed */
+.window.text:after {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  content: 'Ctrl + C to copy';
+  font-weight: 500;
+  font-size: 0.7em;
+  color: #aaa;
+  position: absolute;
+  bottom: 6px;
+}
+
+/* on mac different control */
+.window.text.mac:after {
+  content: '\2318 + C to copy';
+  padding-left: 0.5em;
+}
+
+/*** ADMIN SIDEBAR ***/
+/*********************/
+
+/* if sidebar is expanded moves content to the right */
+body.sidebar_expanded {
+  margin-left: 390px !important;
+}
+
+/* if sidebar is expanded, moves sidebar to right and doesn't fade out (overrides) */
+.sidebar_expanded>#admin {
+  left: 0 !important;
+  -moz-opacity: 1 !important;
+  -khtml-opacity: 1 !important;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100) !important;
+  opacity: 1 !important;
+}
+
+#admin {
+  position: fixed;
+  top: 0;
+  width: 270px;
+  left: -390px;
+  z-index: 100;
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+  opacity: 0.6;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#admin:hover {
+  left: -321px;
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  opacity: 1;
+}
+
+/* the admin sidebar */
+#sidebar {
+  background: #fff;
+  color: #666;
+  border-right: solid 1px #eaeaea;
+  position: fixed;
+  height: 100%;
+  width: 270px;
+  padding: 2.4em 1.4em;
+  overflow-y: auto;
+}
+
+/* spaces links */
+#sidebar a {
+ padding: 0 1em 0.6em 0;
+}
+
+#sidebar section {
+  margin-bottom: 48px;
+}
+
+#sidebar section:nth-last-of-type(1) {
+  margin-bottom: 3.6em;
+}
+
+/* TOP BUTTONS */
+#top_buttons {
+  background: #fff;
+  width: 100px;
+  height: 2.1em;
+  position: absolute;
+  left: 320px;
+  z-index: 1;
+  top: 1.6em;
+  padding-left: 0.6em;
+  border-top: solid 1px #eaeaea;
+  border-bottom: solid 1px #eaeaea;
+}
+
+/* hides text of buttons to be replaced with icons */
+#top_buttons button {
+  text-indent: -9999px;
+  color: #bdb6ad;
+  width: 35px;
+}
+
+/* replace text with icons */
+#top_buttons button:after {
+  font-family: 'icons';
+  color: #bdb6ad;
+  -webkit-font-smoothing: antialiased;
+  text-indent: 0;
+  display: block;
+  margin-top: -0.65em;
+  font-size: 1.43em;
+}
+
+#top_buttons button:hover:after, .sidebar_expanded .menu_button:after {
+  color: #333 !important;
+}
+
+.menu_button:after {
+  content: 'm';
+  font-size: 2.22222222em !important;
+  padding-top: 0.18em;
+}
+
+.newpost_button:after {
+  content: 'f';
+}
+
+/* profile pic link styling */
+.profile_pic {
+  padding: 3px;
+  background: #fff;
+  height: 48px;
+  width: 48px;
+  text-align: center;
+  border: solid 1px #eaeaea;
+  float: right;
+  margin: -0.5em -1.5em 0 0;
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  border-radius: 48px;
+  z-index: 1;
+}
+
+/* mask for circle */
+#top_buttons a:before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 8px;
+  background: #fff;
+  width: 10px;
+  height: 2.1em;
+  z-index: -1;
+}
+
+/* profile pic */
+#top_buttons a img {
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  border-radius: 48px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* hover animation of profile pic */
+#top_buttons a:hover img {
+  -moz-transform:rotate(20deg);
+  -webkit-transform:rotate(20deg);
+  -ms-transform:rotate(20deg);
+  -o-transform:rotate(20deg);
+  transform:rotate(20deg);
+}
+
+/* STATISTICS */
+#statistics {
+  width: 102%; /* slightly larger because on windows in spans across 2 lines */
+}
+
+#statistics span:before, .right span:before {
+  font-family: 'icons';
+  color: #bdb6ad;
+  text-indent: 0;
+  margin-top: -0.7em;
+  font-size: 1.43em;
+}
+
+/* stats counter on one line */
+#statistics div {
+  display: inline-block;
+  height: 2.9em;
+}
+
+/* separate elements  */
+#statistics div:nth-of-type(2) {
+  padding: 0 0.7em;
+  margin: 0 0.4em;
+  border-left: solid 1px #eaeaea;
+  border-right: solid 1px #eaeaea;
+}
+
+/* no padding for heading */
+#statistics h2 {
+  color: #555;
+  margin: 0 0 -0.4em;
+}
+
+/* styles the description under the nubmers */
+#statistics span, #sidebar_content a>span {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  color: #a69d91;
+  font-size: 0.66666667em; /* 12px */
+  text-transform: uppercase;
+}
+
+/* styles the icons of the description */
+#statistics span:before, .right span:before {
+  padding-right: 0.25em;
+  font-size: 1.2em;
+  text-transform: none;
+}
+
+#statistics div:nth-of-type(1)>span:before {
+  content: 'e';
+}
+
+#statistics div:nth-of-type(2)>span:before {
+  content: 'h';
+}
+
+#statistics div:nth-of-type(3)>span:before {
+  content: 'P';
+}
+
+/* SIDEBAR CONTENT */
+#sidebar_content ul {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#sidebar_content ul.full_height {
+  max-height: 100%;
+}
+
+/* positin relative for each element such as the buttons can be placed */
+#sidebar_content ul li {
+  position: relative;
+}
+
+/* styles the link of post/follower */
+#sidebar_content ul a {
+  color: #555;
+  position: relative;
+  text-decoration: none !important;
+  display: block;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.3em;
+  border-bottom: solid 1px #eaeaea;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* styles the span (extra details under) */
+#sidebar_content ul a>span {
+  display: block;
+  margin-top: -0.6em;
+}
+
+/* places extra info of post to the right */
+.right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-transform: lowercase !important;
+}
+
+/* separates text */
+#sidebar_content .right span {
+  padding-left: 0.3em;
+}
+
+#sidebar_content .right span:nth-of-type(1):before {
+  content: 'e';
+}
+
+#sidebar_content .right span:nth-of-type(2):before {
+  content: 'h';
+}
+
+/* positions the buttons */
+#sidebar_content ul button {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  text-indent: -9999px;
+  z-index: 100;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#sidebar_content ul li a:hover {
+  color: #de4830;
+}
+
+/* on hover show the button */
+#sidebar_content ul li:hover>button {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  opacity: 1;
+}
+
+/* adds a slight white bg behind the buttons */
+#sidebar_content ul li:hover:after {
+  content: '';
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(255,255,255,0.8);
+}
+
+#sidebar_content ul button:hover {
+  text-indent: 0;
+}
+
+/* positions the icons differently */
+#sidebar_content ul button:after {
+  font-family: 'icons';
+  -webkit-font-smoothing: antialiased;
+  text-indent: 0;
+  font-size: 1.43em;
+  position: absolute;
+  right: 7px;
+  top: 4px;
+  text-transform: lowercase;
+  overflow: hidden;
+}
+
+/* moves edit button next to delete button */
+.edit_button {
+  right: 35px !important;
+}
+
+/* bigger width of button on hover */
+.edit_button:hover {
+  width: 60px !important;
+}
+
+.edit_button:after {
+  content: 'w';
+}
+
+/* bigger width of button on hover */
+.delete_button:hover {
+  width: 80px !important;
+}
+
+.delete_button:after {
+  content: 'd';
+}
+
+/* bigger width of button on hover */
+.unlike_button:hover {
+  width: 80px !important;
+}
+
+.unlike_button:after {
+  content: 'h';
+  right: 5px !important;
+}
+
+/* bigger width of button on hover */
+.unfollow_button:hover {
+  width: 100px !important;
+}
+
+.unfollow_button:after {
+  content: 'x';
+  right: 7px !important;
+}
+
+/* SETTINGS */
+.settings a, .settings span {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  font-size: 0.66666667em; /* 12px */
+  line-height: 0.66666667em; /* 12px */
+  text-transform: uppercase;
+}
+
+/* moves content under haeder a bit up */
+.settings header {
+  margin-bottom: -4px;
+}
+
+/* moves ? up */
+.superscript {
+  font-size: 1em !important;
+  padding: 1em 0.6em !important;
+  vertical-align: 50%;
+}
+
+/* slider iOS style button */
+.slider {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 22px;
+  float: right;
+  top: 4px;
+  position: relative;
+  width: 55px;
+  background: #fcfcfc;
+  background-image: -moz-linear-gradient(bottom, #fbfbfb 0%, #f5f5f5 100%);
+  background-image: -o-linear-gradient(bottom, #fbfbfb 0%, #f5f5f5 100%);
+  background-image: -webkit-linear-gradient(bottom, #fbfbfb 0%, #f5f5f5 100%);
+  background-image: linear-gradient(bottom, #fbfbfb 0%, #f5f5f5 100%);
+  border: solid 1px #eaeaea;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -webkit-transition: 0.2s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* no tap highlight on mobile devices */
+}
+
+/* OFF text */
+.slider:before {
+  content: 'OFF';
+  color: #de4830;
+  display: block;
+  height: 20px;
+  left: 23px;
+  position: relative;
+  top: 3px;
+  width: 23px;
+}
+
+/* the circle of the slider */
+.slider:after {
+  background: #fff;
+  border: solid 1px #eaeaea;
+  border-radius: 25px;
+  content: '';
+  display: block;
+  height: 20px;
+  left: -1px;
+  position: relative;
+  top: -21px;
+  width: 20px;
+}
+
+/* if checked, move slider to the right */
+.slider:checked {
+  padding-left: 33px;
+}
+
+/* change text to ON */
+.slider:checked:before {
+  content: 'ON';
+  left: -24px;
+  color: #8bbd36;
+}
+
+
+/*** TEXT EDITOR BUTTONS ***/
+/***************************/
+#text_editor_buttons {
+}
+
+/* styles the fullscreen button */
+.fullscreen_button {
+  position: fixed;
+  right: 2em;
+  top: 1.777778em;
+  width: 3.3em;
+  height: 2.8em;
+  text-align: center;
+  text-indent: -9999px;
+  z-index: 100;
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  opacity: 0.5;
+}
+
+/* on hover changes opacity */
+.fullscreen_button:hover {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  opacity: 1;
+}
+
+/* replace text with icons */
+.fullscreen_button:after, .about_person button:after {
+  content: 'F';
+  font-family: 'icons';
+  text-indent: 0;
+  display: block;
+  margin-top: -0.6em;
+  font-size: 1.43em;
+}
+
+/* on hover or active changes colour */
+.fullscreen_button:hover:after, .fullscreen_button.active:after {
+  color: #555 !important;
+}
+
+
+/*** DISCOVER CONTENT ***/
+/************************/
+/* styles the content under the editor, on homepage */
+#discover {
+  margin: 7.2em auto 1.777778em;
+  width: 65%;
+}
+
+/* width of containers */
+#discover>div {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1em;
+  width: 62.5%;
+  padding-right: 2%;
+}
+
+/* sidebar posts have smaller width */
+#discover .sidebar_posts {
+  width: 35%;
+  padding-right: 0;
+}
+
+/* fullsize of sidebar */
+.sidebar_posts.show_more {
+  width: 100% !important;
+}
+
+/* styles each post */
+.posts li {
+  position: relative;
+  margin: -0.3em 0 1.777778em;
+  overflow: hidden;
+  height: 10.3em;
+  background: #ffffff;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-shadow: 0 4px 0 0 #e6e6e6, 0 0 0 1px #e6e6e6;
+  -moz-box-shadow: 0 4px 0 #e6e6e6, 0 0 0 1px #e6e6e6;
+  box-shadow: 0 4px 0 0 #e6e6e6, 0 0 0 1px #e6e6e6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* on hover do some shadows */
+.posts li:hover {
+  -webkit-box-shadow: 0 4px 0 0 #ddd, 0 0 0 1px #ddd;
+  -moz-box-shadow: 0 4px 0 #ddd, 0 0 0 1px #ddd;
+  box-shadow: 0 4px 0 0 #ddd, 0 0 0 1px #ddd, 0 2px 3px 1px #ddd;
+}
+
+/* private posts have a red bar on top */
+.posts li.private:before {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-transform: uppercase;
+  font-size: 0.65em;
+  line-height: 1.75em;
+  content: 'Private (Unpublished)';
+  text-indent: -9999px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: block;
+  height: 7px;
+  position: absolute;
+  background: #de4830;
+}
+
+/* on hover notifies the user that it's private */
+.posts li.private:hover:before {
+  height: 19px;
+  text-indent: 0;
+}
+
+/* sidebar post ul hides extra content */
+.sidebar_posts ul:nth-of-type(1) {
+  max-height: 57.8em;
+  margin: -3% 0 1.777778em -1%;
+  padding: 3% 1%;
+  overflow: hidden;
+}
+
+/* bigger height for sidebar posts */
+.sidebar_posts li {
+  height: 13.45em;
+  margin-bottom: 1.777778em;
+}
+
+/* when sidebar is full width, show posts inline */
+.sidebar_posts.show_more li {
+  width: 32.1%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* adds padding between posts in full width */
+.sidebar_posts.show_more li:nth-of-type(3n+2) {
+  margin: -0.3em 1.6%;
+}
+
+/* on active, changes the border and moves down a bit */
+.posts li:active {
+  top: 2px;
+  -webkit-box-shadow: 0 0 0 1px #e6e6e6, 0 4px 0 0 #fdfdfd;
+  -moz-box-shadow: 0 0 0 1px #e6e6e6, 0 4px 0 0 #fdfdfd;
+  box-shadow: 0 0 0 1px #e6e6e6, 0 4px 0 0 #fdfdfd;
+}
+
+/* clearfix for floats */
+.posts:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* styles the link of each small post */
+.small_post {
+  font-size: 0.88888889em; /* 16px */
+  line-height: 1.733em; /* 24px */
+  padding: 1.2em 1.2em 1.777778em;
+  color: #444 !important;
+  display: block;
+  text-decoration: none !important;
+}
+
+/* no padding for heading */
+.small_post>h2 {
+  margin-top: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* make colour of tex of link darker */
+.small_post:hover>p {
+  color: #333 !important;
+}
+
+/* on hover change to link colour */
+.small_post:hover>h2, .small_post_footer a:hover {
+  color: #de4830;
+}
+
+/* visited links have different colour */
+.small_post:visited, .small_post:visited>h2 {
+  color: #666 !important;
+}
+
+.small_post:visited:hover>h2 {
+  color: #c46655 !important;
+}
+
+/* position the bottom element of post */
+.small_post_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.1em 1.777778em 1.777778em;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* colour of link same as text */
+.small_post_footer a {
+  color: #a69d91;
+}
+
+/* each text container is divided in half */
+.small_post_footer span {
+  display: inline-block;
+  width: 47%;
+  position: relative;
+}
+
+/* smaller width of spans for sidebar */
+.sidebar_posts .small_post_footer span {
+  width: 44.5%;
+}
+
+/* positions right element to the right */
+.small_post_footer span:nth-of-type(2) {
+  text-align: right;
+}
+
+/* moves the text from the span with the avatar image */
+.avatar {
+  padding-left: 2.5em;
+  margin-right: -2.5em;
+}
+
+/* styles the avatar image */
+.avatar .img {
+  position: absolute;
+  left: -2.2em;
+  top: 0%;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+  opacity: 0.6;
+}
+
+/* avatar image is circle */
+.avatar img {
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  border-radius: 48px;
+}
+
+/* on hover move avatar up and opacity */
+.posts li:hover .avatar .img {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  opacity: 1;
+  top: -140%;
+}
+
+/* full width button in sidebar */
+.full_width, .small_width {
+  float: right;
+  cursor: pointer;
+  color: #bbb;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* on hover makes it look like a link */
+.full_width:hover, .small_width:hover {
+  color: #de4830;
+  text-decoration: underline;
+}
+
+
+/*** NAVIGATION ARROWS ***/
+/*************************/
+#navigation_arrows {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* the navigation links */
+#navigation_arrows a {
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 20%;
+  display: block;
+}
+
+.newer_post_arrow {
+  right: 0;
+}
+
+.older_post_arrow span, .newer_post_arrow span {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px 10px 10px;
+  display: block;
+  width: 105px;
+  position: fixed;
+  top: 45%;
+  left: -85px;
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+  opacity: 0.4;
+}
+
+.newer_post_arrow span {
+  position: fixed;
+  left: auto !important;
+  right: -85px;
+  text-align: right;
+}
+
+#navigation_arrows a:hover span {
+  left: -5px;
+  right: -5px;
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  opacity: 1;
+}
+
+.older_post_arrow span:after,  .newer_post_arrow span:before {
+  content: '\003C';
+  font-size: 3.5em;
+  float: right;
+  margin-top: -4px;
+}
+
+.newer_post_arrow span:before {
+  content: '\003E';
+  float: left;
+}
+
+
+
+
+#profile {
+  margin: 0 auto 1.777778em;
+  width: 90%;
+  position: relative;
+}
+
+#profile li {
+  width: 23.5%;
+  height: 13.45em;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1.6%;
+}
+
+/* adds padding between posts in full width */
+#profile li:nth-of-type(4n+6), #profile li:nth-of-type(4), #profile li:nth-of-type(10) {
+  margin-right: 0;
+}
+
+#profile li:nth-of-type(5) {
+  margin-right: 52.25%;
+}
+
+#profile li:nth-of-type(8) {
+  margin-right: 1.6%;
+}
+
+.about_person {
+  text-align: center;
+  width: 47%;
+  position: absolute;
+  top: 16em;
+  left: 26%;
+}
+
+/* floats to the left */
+.about_person h2, .about_person span {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.about_person span:nth-of-type(1) {
+  width: 18%;
+  text-align: center;
+  margin-top: 0.6em;
+}
+
+.about_person span:nth-of-type(2) {
+  text-align: left;
+  margin-top: -0.1em;
+}
+
+.about_person img {
+  border-radius: 72px;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ddd;
+}
+
+.about_person button {
+  width: 85px;
+}
+
+.about_person button:after {
+  position: absolute;
+  top: 60%;
+  right: 5px;
+  content: 'y';
+  text-transform: lowercase;
+}
+
+.about_person p {
+  margin: 0.5em 0 0;
+  clear: both;
+}
+
+.about_person p+p {
+  margin: 0;
+}

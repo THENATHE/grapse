@@ -1,0 +1,289 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "search": [
+        "menu",
+        "list"
+      ],
+      "code": 109,
+      "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
+      "css": "menu",
+      "orig_css": "menu",
+      "orig_code": 109,
+      "src": "entypo",
+      "from": 9776
+    },
+    {
+      "search": [
+        "list"
+      ],
+      "code": 76,
+      "from": 9776,
+      "uid": "cy7vw87w1slwyalc4vd8cdhrb50asud3",
+      "css": "th-list",
+      "orig_css": "th-list",
+      "orig_code": 76,
+      "src": "modernpics"
+    },
+    {
+      "search": [
+        "heart"
+      ],
+      "code": 104,
+      "from": 9829,
+      "uid": "d73eceadda1f594cec0536087539afbf",
+      "css": "heart",
+      "orig_css": "heart",
+      "orig_code": 104,
+      "src": "fontawesome"
+    },
+    {
+      "search": [
+        "pencil",
+        "write",
+        "reply",
+        "edit"
+      ],
+      "code": 119,
+      "uid": "c77fd2fd065b5fe16d6f2b41e190b266",
+      "css": "pencil",
+      "orig_css": "pencil",
+      "orig_code": 119,
+      "src": "entypo",
+      "from": 9998
+    },
+    {
+      "search": [
+        "ok",
+        true,
+        "check",
+        "mark"
+      ],
+      "code": 121,
+      "uid": "b90d80c250a9bbdd6cd3fe00e6351710",
+      "file": "check",
+      "css": "ok",
+      "orig_css": "ok",
+      "orig_code": 121,
+      "src": "iconic",
+      "from": 10003
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 120,
+      "uid": "11e664deed5b2587456a4f9c01d720b6",
+      "file": "x",
+      "css": "cancel",
+      "orig_css": "cancel",
+      "orig_code": 120,
+      "src": "iconic",
+      "from": 10005
+    },
+    {
+      "search": [
+        "plus"
+      ],
+      "code": 43,
+      "uid": "d4aeb916de8d3aea716442778346d244",
+      "css": "plus-circled",
+      "orig_css": "plus-circled",
+      "orig_code": 43,
+      "src": "elusive",
+      "from": 57433
+    },
+    {
+      "search": [
+        "eye",
+        "subscribe"
+      ],
+      "code": 101,
+      "from": 59146,
+      "uid": "c5fd349cbd3d23e4ade333789c29c729",
+      "css": "eye",
+      "orig_css": "eye",
+      "orig_code": 101,
+      "src": "fontawesome"
+    },
+    {
+      "search": [
+        "trash",
+        "delete"
+      ],
+      "code": 100,
+      "from": 59177,
+      "uid": "f48ae54adfb27d8ada53d0fd9e34ee10",
+      "css": "trash",
+      "orig_css": "trash",
+      "orig_code": 100,
+      "src": "fontawesome"
+    },
+    {
+      "search": [
+        "doc",
+        "article"
+      ],
+      "code": 110,
+      "uid": "cb35902d643e9e6ba8ba1cf739edef9a",
+      "file": "document_alt_fill",
+      "css": "doc-inv",
+      "orig_css": "doc-inv",
+      "orig_code": 110,
+      "src": "iconic",
+      "from": 59185
+    },
+    {
+      "search": [
+        "resize",
+        "fullscreen"
+      ],
+      "code": 70,
+      "uid": "4815ddddea76d90e367a9694a93b7e24",
+      "file": "fullscreen",
+      "css": "resize-full",
+      "orig_css": "resize-full",
+      "orig_code": 70,
+      "src": "iconic",
+      "from": 59204
+    },
+    {
+      "search": [
+        "resize"
+      ],
+      "code": 102,
+      "uid": "b05c5a209b56e7ea6632a31e4bd0b41d",
+      "file": "fullscreen_exit",
+      "css": "resize-small",
+      "orig_css": "resize-small",
+      "orig_code": 102,
+      "src": "iconic",
+      "from": 59206
+    },
+    {
+      "search": [
+        "emoticon",
+        "smiley",
+        "unhappy"
+      ],
+      "code": 40,
+      "meta": {
+        "email": "berbentseva_angela@yahoo.com",
+        "author": "Angela Berbentseva, specially for fontello"
+      },
+      "uid": "53ed8570225581269cd7eff5795e8bea",
+      "css": "emo-unhappy",
+      "orig_css": "emo-unhappy",
+      "orig_code": 40,
+      "src": "fontelico",
+      "from": 59394
+    },
+    {
+      "search": [
+        "twitter"
+      ],
+      "code": 116,
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "orig_css": "twitter",
+      "orig_code": 116,
+      "src": "fontawesome",
+      "from": 61593
+    },
+    {
+      "search": [
+        "image",
+        "picture",
+        "photo"
+      ],
+      "code": 112,
+      "from": 127748,
+      "uid": "381da2c2f7fd51f8de877c044d7f439d",
+      "css": "picture-1",
+      "orig_css": "picture",
+      "orig_code": 112,
+      "src": "fontawesome"
+    },
+    {
+      "search": [
+        "users",
+        "contacts",
+        "friends"
+      ],
+      "code": 80,
+      "uid": "ecf8edb95c3f45eb433b4cce7ba9f740",
+      "css": "users",
+      "orig_css": "users",
+      "orig_code": 80,
+      "src": "entypo",
+      "from": 128101
+    },
+    {
+      "search": [
+        "floppy",
+        "save"
+      ],
+      "code": 115,
+      "uid": "191bcf63575a78def53c907c3d3bf7f0",
+      "css": "floppy",
+      "orig_css": "floppy",
+      "orig_code": 115,
+      "src": "entypo",
+      "from": 128190
+    },
+    {
+      "search": [
+        "book",
+        "doc"
+      ],
+      "code": 68,
+      "uid": "51727ca007aa35ceabcaffc28934faee",
+      "css": "book-open",
+      "orig_css": "book-open",
+      "orig_code": 68,
+      "src": "entypo",
+      "from": 128214
+    },
+    {
+      "search": [
+        "megaphone",
+        "bullhorn"
+      ],
+      "code": 77,
+      "from": 128227,
+      "uid": "3e674995cacc2b09692c096ea7eb6165",
+      "css": "megaphone-1",
+      "orig_css": "megaphone",
+      "orig_code": 77,
+      "src": "fontawesome"
+    },
+    {
+      "search": [
+        "lock"
+      ],
+      "code": 128274,
+      "from": 128274,
+      "uid": "c1f1975c885aa9f3dad7810c53b82074",
+      "css": "lock",
+      "orig_css": "lock",
+      "orig_code": 128274,
+      "src": "fontawesome"
+    },
+    {
+      "search": [
+        "link",
+        "url"
+      ],
+      "code": 108,
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "orig_css": "link",
+      "orig_code": 108,
+      "src": "entypo",
+      "from": 128279
+    }
+  ]
+}

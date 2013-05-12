@@ -1,0 +1,26 @@
+CACHE MANIFEST
+# 2010-03-03:v0.0.001
+
+# Explicitly cached entries
+index.html
+css/style.css
+js/editor.js
+js/interface.js
+
+# offline.html will be displayed if the user is offline
+FALLBACK:
+# / /offline.html
+
+# All other resources (e.g. sites) require the user to be online. 
+NETWORK:
+*
+
+# Additional resources to cache
+CACHE:
+fonts/fontello.eot
+fonts/fontello.svg
+fonts/fontello.ttf
+fonts/fontello.woff
+# images/logo1.png
+# images/logo2.png
+# images/logo3.png
