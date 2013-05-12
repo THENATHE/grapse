@@ -1,9 +1,11 @@
 ## Minimal writing platform
 “Γράψε” means “write” in Greek. This is just the front-end interface of the app. All back-end functionality is disabled.
-Coming soon. https://twitter.com/GrapseApp
 
 ## Stats
 2500 lines of CSS, 1800 lines of JS, 600 lines Ruby
+
+## Coming soon
+http://grapse.me
 
 ## License
 This repo is licensed under the MIT License.
