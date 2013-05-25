@@ -1,4 +1,4 @@
-## Minimal writing platform
+## Minimal writing platform 
 “Γράψε” means “write” in Greek. This is just the front-end interface of the app. All back-end functionality is disabled.
 
 ## Stats
