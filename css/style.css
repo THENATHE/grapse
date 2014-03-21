@@ -12,6 +12,10 @@ img, embed, object, video {
   max-width: 100%;
 }
 
+button:focus {
+  outline: none;
+}
+
 body {
   font-family: 'Bitter', Georgia, serif;
   -webkit-font-smoothing: antialiased;
@@ -231,7 +235,7 @@ button:after {
   -webkit-box-shadow: 0px 3px 0px #a4d64e;
   -moz-box-shadow: 0px 3px 0px #a4d64e;
   box-shadow: 0px 3px 0px #a4d64e;
-} 
+}
 
 .white:active {
   -webkit-box-shadow: 0 0 0 1px #e6e6e6, 0 4px 0 0 #fdfdfd;
@@ -285,7 +289,7 @@ blockquote {
 
 /* used to hide mobile elements */
 em {
-  font-style: normal; 
+  font-style: normal;
 }
 
 #post_content li:before {
@@ -1956,13 +1960,14 @@ a.twitter:before {
   -webkit-border-radius: 73px;
   -moz-border-radius: 73px;
   border-radius: 73px;
-  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ddd;
-  -moz-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ddd;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ddd;
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 3px #ddd;
+  -moz-box-shadow: 0 0 0 2px #fff, 0 0 0 3px #ddd;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #ddd;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  max-width: 73px;
 }
 
 /* avatar is a link */
@@ -2307,7 +2312,7 @@ a.twitter:before {
   }
 
   /* avatar on recommended people list */
-  .recommended_people_list img { 
+  .recommended_people_list img {
     margin-right: 20px;
   }
 
